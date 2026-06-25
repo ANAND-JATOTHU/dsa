@@ -50,5 +50,61 @@ def swap(a, b):
     return a, b
 ```
 
-## 📝 PYQs & Practice Problems
-*   *Practice applying these tricks in any basic array problem on LeetCode or Codeforces.*
+## 📝 PYQs & Practice Problems (Python Logic & Syntax Tricks)
+
+**Q1. (Codeforces Pattern) Read N integers and print the sum of only the EVEN numbers.**
+> **Solution**:
+> ```python
+> import sys
+> def solve():
+>     data = sys.stdin.read().split()
+>     if not data: return
+>     n = int(data[0])
+>     arr = [int(x) for x in data[1:n+1]]
+>     
+>     # Pythonic 1-liner:
+>     even_sum = sum(x for x in arr if x % 2 == 0)
+>     print(even_sum)
+> ```
+
+**Q2. (TCS String Pattern) Reverse a string and check if it is a palindrome without using loops.**
+> **Solution**:
+> ```python
+> def is_palindrome(s: str) -> bool:
+>     # Python slicing trick: [::-1] reverses the sequence in C-speed
+>     return s == s[::-1]
+> ```
+
+**Q3. (Array Pattern) Given a 2D matrix, flatten it into a 1D array.**
+> **Solution**:
+> ```python
+> def flatten_matrix(matrix):
+>     # List comprehension trick for nested loops
+>     # Read as: give me 'num' for every 'row' in matrix, for every 'num' in row
+>     return [num for row in matrix for num in row]
+> ```
+
+**Q4. (Hashing Intro) Given an array, find the frequency of each element in just 1-2 lines.**
+> **Solution**:
+> ```python
+> from collections import Counter
+> 
+> def get_frequencies(arr):
+>     # Counter automatically builds a dictionary of frequencies in O(N) time!
+>     freq_dict = Counter(arr)
+>     return freq_dict
+> ```
+
+**Q5. (Math Logic) Swap the maximum and minimum elements in an array.**
+> **Solution**:
+> ```python
+> def swap_max_min(arr):
+>     if not arr: return arr
+>     # Find indices using built-in methods
+>     min_idx = arr.index(min(arr))
+>     max_idx = arr.index(max(arr))
+>     
+>     # Python tuple swapping
+>     arr[min_idx], arr[max_idx] = arr[max_idx], arr[min_idx]
+>     return arr
+> ```

@@ -2,16 +2,36 @@
 
 ## 🚀 Quick Revision (The "Cheat Sheet")
 *   **Fraction to Percentage Shortcuts**:
-    *   1/2 = 50%
-    *   1/3 = 33.33%
-    *   1/4 = 25%
-    *   1/5 = 20%
-    *   1/6 = 16.66%
-    *   1/7 = 14.28%
-    *   1/8 = 12.5%
+    *   0.5 = 50%
+    *   0.33 = 33.33%
+    *   0.25 = 25%
+    *   0.20 = 20%
+    *   0.166 = 16.66%
+    *   0.142 = 14.28%
+    *   0.125 = 12.5%
 *   **The Magic Formula (A = B)**: `x% of y = y% of x`. (Example: 12.5% of 80 is the same as 80% of 12.5).
 
-## 🧠 Deep Dive
+## 🧠 Deep Dive: Basic Math Tricks (TCS Lifesavers)
+
+Before diving into Percentages, you MUST know these calculation tricks. They will save you minutes in the exam.
+
+**1. Divisibility Rules (For quick cancellation)**:
+*   **By 3**: Sum of all digits is divisible by 3. (e.g., 123 -> 1+2+3 = 6. Yes!)
+*   **By 4**: Last 2 digits are divisible by 4. (e.g., 512 -> 12 is div by 4. Yes!)
+*   **By 9**: Sum of all digits is divisible by 9.
+*   **By 11**: (Sum of odd places) - (Sum of even places) = 0 or multiple of 11.
+
+**2. Finding LCM (Lowest Common Multiple)**:
+*   **Standard Method**: Prime factorization.
+*   **Shortcut Method (TCS Style)**: Take the largest number. Check if the smaller numbers divide it perfectly. If not, multiply the largest number by 2, then 3, until they do.
+    *   *Example: LCM of 4, 6, 8*. Largest is 8. 4 divides 8, but 6 doesn't. Try 8 x 2 = 16. 6 doesn't divide 16. Try 8 x 3 = 24. 6 doesn't divide 24. Try 8 x 3 is wrong, wait. LCM of 4, 6, 8. Largest is 8. Multiples: 8, 16, 24. 4 and 6 both divide 24. LCM is 24!
+
+**3. Cross Multiplication (For Ratio/Proportion)**:
+When you have $\frac{a}{b} = \frac{c}{d}$, always cross multiply: $a \times d = b \times c$. 
+
+---
+
+## 🧠 Deep Dive: Percentages
 Percentages are the backbone of Quantitative Aptitude. If you master percentages, you automatically master Profit & Loss, Simple Interest, Compound Interest, and Data Interpretation (DI). 
 
 **Successive Percentage Change**:
@@ -65,3 +85,26 @@ What is 16.66% of 420 plus 42% of 166.6?
 > 166.6% is $(100\% + 66.66\%) = 1 + 2/3 = 5/3$.
 > So, $(5/3) \times 42 = 5 \times 14 = 70$.
 > Total = $70 + 70 = 140$.
+
+---
+
+## 📝 PYQs & Practice Problems (Basic Math & Divisibility)
+
+**Q7. (Divisibility by 9)**
+If the number 8947A56B1 is divisible by 9, where B is an odd number. Find the sum of all possible values of A?
+> **Solution**:
+> Digit sum = 8+9+4+7+A+5+6+B+1 = 40 + A + B.
+> For it to be divisible by 9, (40 + A + B) must be a multiple of 9 (e.g., 45, 54).
+> So, A + B = 5 or A + B = 14.
+> Since B is odd, B can be 1, 3, 5, 7, 9.
+> Possible values for A based on B:
+> If B=1, A=4. If B=3, A=2. If B=5, A=0 or 9. If B=7, A=7. If B=9, A=5.
+> Sum of all possible values of A = 4 + 2 + 0 + 9 + 7 + 5 = 27.
+
+**Q8. (Divisibility by 11)**
+What least number must be subtracted from 210 so that the result is completely divisible by 11?
+> **Solution**:
+> Divide 210 by 11.
+> $210 = 11 \times 19 + 1$.
+> The remainder is 1. If we subtract the remainder (1) from 210, the result (209) is completely divisible by 11.
+> Answer: 1.

@@ -26,7 +26,6 @@ As we walk through the array, we ask: *"What number do I need to complete the ta
 i=0: num=2, required=9-2=7. seen={}. 7 not in seen. Store {2:0}
 i=1: num=7, required=9-7=2. seen={2:0}. 2 IS in seen! Return [seen[2], 1] = [0, 1] ✅
 ```
-
 ---
 
 ## 💻 Implementations
